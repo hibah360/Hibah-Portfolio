@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.png";
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -12,10 +13,12 @@ export function Hero() {
       
       <div className="container max-w-4xl mx-auto text-center relative z-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
         <div className="mb-6">
-          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-accent p-1 mb-8 animate-in zoom-in duration-700 delay-200">
-            <div className="w-full h-full rounded-full bg-card flex items-center justify-center text-6xl font-bold text-gradient">
-              JD
-            </div>
+          <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-primary to-accent p-1 mb-8 animate-in zoom-in duration-700 delay-200 overflow-hidden">
+            <img 
+              src={profilePhoto} 
+              alt="Profile" 
+              className="w-full h-full rounded-full object-cover"
+            />
           </div>
         </div>
         
