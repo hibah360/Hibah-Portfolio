@@ -7,7 +7,7 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden pt-24">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card opacity-50" />
       
       <div className="container max-w-4xl mx-auto text-center relative z-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
