@@ -1,0 +1,67 @@
+import { Button } from "@/components/ui/button";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+
+export function Hero() {
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card opacity-50" />
+      
+      <div className="container max-w-4xl mx-auto text-center relative z-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+        <div className="mb-6">
+          <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-accent p-1 mb-8 animate-in zoom-in duration-700 delay-200">
+            <div className="w-full h-full rounded-full bg-card flex items-center justify-center text-6xl font-bold text-gradient">
+              JD
+            </div>
+          </div>
+        </div>
+        
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-in slide-in-from-bottom-4 duration-700 delay-300">
+          Hi, I'm <span className="text-gradient">John Doe</span>
+        </h1>
+        
+        <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-in slide-in-from-bottom-4 duration-700 delay-500">
+          Full Stack Developer & Creative Problem Solver
+        </p>
+        
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 animate-in fade-in duration-700 delay-700">
+          Crafting elegant solutions through clean code and thoughtful design. 
+          Passionate about building impactful digital experiences.
+        </p>
+        
+        <div className="flex gap-4 justify-center mb-12 animate-in slide-in-from-bottom-4 duration-700 delay-900">
+          <Button 
+            size="lg" 
+            onClick={() => scrollToSection("projects")}
+            className="group"
+          >
+            View My Work
+            <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+          </Button>
+          <Button 
+            size="lg" 
+            variant="outline"
+            onClick={() => scrollToSection("contact")}
+          >
+            Get In Touch
+          </Button>
+        </div>
+        
+        <div className="flex gap-4 justify-center animate-in fade-in duration-700 delay-1000">
+          <Button variant="ghost" size="icon" className="rounded-full hover:scale-110 transition-transform">
+            <Github className="h-5 w-5" />
+          </Button>
+          <Button variant="ghost" size="icon" className="rounded-full hover:scale-110 transition-transform">
+            <Linkedin className="h-5 w-5" />
+          </Button>
+          <Button variant="ghost" size="icon" className="rounded-full hover:scale-110 transition-transform">
+            <Mail className="h-5 w-5" />
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}
