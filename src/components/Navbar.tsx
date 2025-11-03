@@ -46,7 +46,7 @@ export function Navbar() {
             onClick={() => scrollToSection("home")}
             className="text-2xl font-bold text-gradient hover:scale-105 transition-transform"
           >
-            JD
+            HAR
           </button>
 
           {/* Desktop Navigation */}

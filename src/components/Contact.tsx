@@ -20,9 +20,9 @@ export function Contact() {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "john.doe@example.com" },
-    { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-    { icon: MapPin, label: "Location", value: "San Francisco, CA" }
+    { icon: Mail, label: "Email", value: "hibahar321@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+91 8277471739" },
+    { icon: MapPin, label: "Location", value: "Mangalore, karnataka" }
   ];
 
   return (
