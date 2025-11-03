@@ -28,9 +28,15 @@ export function About() {
         </h2>
         
         <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-16">
-          I'm a full-stack developer with a keen eye for detail and a passion for creating 
-          exceptional user experiences. With expertise in modern web technologies, I transform 
-          ideas into elegant, functional applications.
+          Hi there! I'm a Full Stack Developer with over 2 years of experience working with the MERN stack 
+          (MongoDB, Express, React, and Node.js). I love building clean, functional, and user-friendly web 
+          applications. Recently, I've been diving into Python to level up my skills and explore the exciting 
+          world of AI.
+          <br /><br />
+          I've also had hands-on experience with Jenkins and CI/CD pipelines, which has helped me understand 
+          the complete development and deployment process. I'm a certified Full Stack Developer, with a solid 
+          foundation in Java, SQL, HTML, CSS, and JavaScript — and I'm always curious to learn and experiment 
+          with new technologies.
         </p>
         
         <div className="grid md:grid-cols-3 gap-8">
