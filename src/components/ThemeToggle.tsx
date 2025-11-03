@@ -20,7 +20,7 @@ export function ThemeToggle() {
       variant="outline"
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="fixed top-4 right-4 z-50 rounded-full transition-all duration-300 hover:scale-110"
+      className="fixed top-20 right-4 z-50 rounded-full transition-all duration-300 hover:scale-110"
     >
       {theme === "dark" ? (
         <Sun className="h-5 w-5" />
