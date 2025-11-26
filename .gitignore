@@ -7,7 +7,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# Node modules
+frontend/node_modules/
+backend/node_modules/
+
+# Build outputs
 dist
 dist-ssr
 *.local
@@ -22,3 +26,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generic ignore
+**/node_modules/
