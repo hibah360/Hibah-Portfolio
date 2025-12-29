@@ -16,17 +16,42 @@ export function Footer() {
               © {currentYear} All rights reserved.
             </p>
           </div>
-          
+
           <div className="flex gap-3">
-            <Button variant="ghost" size="icon" className="rounded-full hover:scale-110 transition-transform">
-              <Github className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="rounded-full hover:scale-110 transition-transform">
-              <Linkedin className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon" className="rounded-full hover:scale-110 transition-transform">
-              <Mail className="h-5 w-5" />
-            </Button>
+            <a
+              href="https://github.com/hibah360?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+            ><Button variant="ghost" size="icon" className="rounded-full hover:scale-110 transition-transform">
+                <Github className="h-5 w-5" />
+              </Button>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/hibah-abdul-razak-13b038199/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="ghost" size="icon" className="rounded-full hover:scale-110 transition-transform">
+                <Linkedin className="h-5 w-5" />
+              </Button>
+            </a>
+
+            <a
+              href="https://mail.google.com/mail/?view=cm&to=hibahar321@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="rounded-full hover:scale-110 transition-transform"
+              >
+                <Mail className="h-5 w-5" />
+              </Button>
+            </a>
+
+
           </div>
         </div>
       </div>

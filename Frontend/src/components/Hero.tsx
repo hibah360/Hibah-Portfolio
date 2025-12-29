@@ -79,7 +79,7 @@ export function Hero() {
 
           {/* Email */}
           <a
-            href="mailto:hibahrazak@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&to=hibahar321@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import emailjs from "emailjs-com";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -15,9 +16,30 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! I'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          toast.success("Message sent! I'll get back to you soon.");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          toast.error("Failed to send message. Please try again.");
+        }
+      );
   };
+
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "hibahar321@gmail.com" },
@@ -31,15 +53,15 @@ export function Contact() {
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
           Get In <span className="text-gradient">Touch</span>
         </h2>
-        
+
         <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-16">
           Have a project in mind or want to collaborate? I'd love to hear from you!
         </p>
-        
+
         <div className="grid md:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-            
+
             <div className="space-y-6 mb-8">
               {contactInfo.map((item, index) => (
                 <Card key={index} className="border-2">
@@ -55,12 +77,12 @@ export function Contact() {
                 </Card>
               ))}
             </div>
-            
+
             <p className="text-muted-foreground">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
           </div>
-          
+
           <Card className="border-2">
             <CardContent className="pt-6">
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -76,7 +98,7 @@ export function Contact() {
                     required
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
                     Email
@@ -90,7 +112,7 @@ export function Contact() {
                     required
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
                     Message
@@ -104,7 +126,7 @@ export function Contact() {
                     required
                   />
                 </div>
-                
+
                 <Button type="submit" size="lg" className="w-full">
                   Send Message
                 </Button>
