@@ -12,6 +12,13 @@ export function Projects() {
       gradient: "from-primary to-accent",
       liveUrl: "https://screener.infomaticscorp.com/",
     },
+    {
+      title: "Coding Platform",
+      description: "Built and deployed a scalable online coding platform supporting Java, JavaScript, and Python, with a React frontend hosted on AWS S3 and a Node.js backend running on AWS EC2 for real-time code execution.",
+      tags: ["MongoDB", "Express", "Node", "React", "AWS(S3,EC2)"],
+      gradient: "from-primary to-accent",
+      liveUrl: "http://code-compiler-frontend-hibah.s3-website.ap-south-2.amazonaws.com/",
+    },
     // {
     //   title: "Task Management App",
     //   description: "Collaborative project management tool with real-time updates, team chat, and progress tracking.",

@@ -27,7 +27,7 @@ export function About() {
           About <span className="text-gradient">Me</span>
         </h2>
 
-        <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-16">
+        {/* <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-16">
           Hi there! I'm a Full Stack Developer with over 2 years of experience working with the MERN stack
           (MongoDB, Express, React, and Node.js). I love building clean, functional, and user-friendly web
           applications. Recently, I've been diving into Python to level up my skills and explore the exciting
@@ -37,6 +37,21 @@ export function About() {
           the complete development and deployment process. I'm a certified Full Stack Developer, with a solid
           foundation in Java, SQL, HTML, CSS, and JavaScript — and I'm always curious to learn and experiment
           with new technologies.
+        </p> */}
+
+        <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-16">
+          Hi! I'm a Full Stack Developer with 2+ years of hands-on experience building scalable and user-friendly
+          web applications using the MERN stack (MongoDB, Express, React, and Node.js). I enjoy transforming ideas
+          into clean, efficient, and impactful digital solutions.
+          <br /><br />
+          I have hands-on exposure to Jenkins and CI/CD pipelines, which has helped me understand the complete
+          development and deployment lifecycle. Alongside this, I’m currently learning AWS and have explored
+          core services like EC2 and S3 buckets, while actively working on understanding and experimenting with
+          more cloud features.
+          <br /><br />
+          I'm a certified Full Stack Developer with a strong foundation in Java, SQL, HTML, CSS, and JavaScript.
+          At present, I’m expanding my skill set by learning Python, cloud technologies, and AI-related concepts —
+          driven by curiosity, continuous learning, and a passion for building better solutions.
         </p>
 
         {/* <div className="grid md:grid-cols-3 gap-8">

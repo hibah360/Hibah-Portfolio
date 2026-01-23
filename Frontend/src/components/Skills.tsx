@@ -13,7 +13,7 @@ export function Skills() {
     },
     {
       category: "Tools & Others",
-      skills: ["Git", "Jenkins", "Figma", "CI/CD"]
+      skills: ["Git", "Jenkins", "Figma", "CI/CD", "AWS(EC2,S3)"]
     }
   ];
 
