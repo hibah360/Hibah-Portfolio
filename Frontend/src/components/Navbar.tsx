@@ -33,11 +33,10 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
           ? "bg-background/80 backdrop-blur-lg border-b shadow-sm"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="container max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -56,7 +55,8 @@ export function Navbar() {
                 key={item.id}
                 variant="ghost"
                 onClick={() => scrollToSection(item.id)}
-                className="hover:text-primary transition-colors"
+                // className="hover:text-primary transition-colors"
+                className="hover:text-white transition-colors"
               >
                 {item.label}
               </Button>
