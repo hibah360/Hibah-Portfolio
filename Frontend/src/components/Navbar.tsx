@@ -2,8 +2,13 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
-export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+type NavbarProps = {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export function Navbar({ isOpen, setIsOpen }: NavbarProps) {
+  // const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,8 +39,8 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b shadow-sm"
-          : "bg-transparent"
+        ? "bg-background/80 backdrop-blur-lg border-b shadow-sm"
+        : "bg-transparent"
         }`}
     >
       <div className="container max-w-6xl mx-auto px-4">
@@ -82,7 +87,7 @@ export function Navbar() {
                 key={item.id}
                 variant="ghost"
                 onClick={() => scrollToSection(item.id)}
-                className="w-full justify-start hover:text-primary transition-colors"
+                className="w-full justify-start hover:text-white transition-colors"
               >
                 {item.label}
               </Button>

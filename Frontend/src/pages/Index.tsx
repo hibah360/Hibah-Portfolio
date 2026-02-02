@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
@@ -8,11 +9,17 @@ import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
+
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="min-h-screen">
-      <Navbar />
+      {/* ✅ Pass state to Navbar */}
+      <Navbar isOpen={menuOpen} setIsOpen={setMenuOpen} />
+
       <ThemeToggle />
-      <Hero />
+
+      {/* ✅ Tell Hero when menu is open */}
+      <Hero menuOpen={menuOpen} />
       <About />
       <Projects />
       <Skills />

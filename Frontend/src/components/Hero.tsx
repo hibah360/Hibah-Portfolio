@@ -2,13 +2,23 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.png";
 
-export function Hero() {
+export function Hero({ menuOpen }: { menuOpen: boolean }) {
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden pt-24">
+    <section
+      // className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden pt-24"
+      className={`
+    min-h-screen
+    flex items-center justify-center
+    px-4 relative overflow-hidden pt-24
+    transition-all duration-300
+
+    ${menuOpen ? "mt-56 md:mt-0" : "mt-0"}
+  `}
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card opacity-50" />
 
       <div className="container max-w-4xl mx-auto text-center relative z-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
